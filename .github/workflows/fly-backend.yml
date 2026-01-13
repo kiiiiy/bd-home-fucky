@@ -24,7 +24,9 @@ jobs:
           cache: gradle
 
       - name: Build jar
-        run: ./gradlew bootJar -x test
+        run: |
+          chmod +x ./gradlew
+          ./gradlew bootJar -x test
 
       - name: Set up flyctl
         uses: superfly/flyctl-actions/setup-flyctl@master
