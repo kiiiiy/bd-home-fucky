@@ -1,0 +1,7 @@
+admin:
+  password-hash: ${ADMIN_PASSWORD_HASH}
+
+jwt:
+  secret: ${JWT_SECRET}
+  expires-seconds: 3600
+  issuer: bd-home
