@@ -60,7 +60,8 @@ echo "==> Setup backend & frontend inside this repo"
 echo
 echo "==> Fly app bootstrap & GitHub secret setup"
 
-APP_NAME="bd-homepage-${OWNER}"
+FLY_APP="${FLY_APP:-bd-homepage-${OWNER}}"
+APP_NAME="$FLY_APP" 
 if [ -d "${ROOT_DIR}/backend" ]; then
   BACKEND_DIR="${ROOT_DIR}/backend"
 elif [ -d "${ROOT_DIR}/bd-home-template/backend" ]; then
